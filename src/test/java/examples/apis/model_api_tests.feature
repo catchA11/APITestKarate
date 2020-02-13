@@ -5,8 +5,10 @@ Feature: Model API
     * path 'model'
     * header Accept = 'application/json'
 
-  Scenario: Get Model
+  Scenario: Get Model Arteon
     When request {label: 'Arteon'}
     And method get
     Then match response == read('expected-arteon.json')
+    And print 'Response is: ', response
+
 
