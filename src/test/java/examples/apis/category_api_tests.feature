@@ -30,7 +30,7 @@ Feature: Category API
       | requestText                      | methodType |
       | {"id":"15","label":"Test Label"} | put        |
       | {"label":"Test Label"}           | post       |
-      | {"name":"Accessories"}           | delete     |
+      | {"label":"Accessories"}          | delete     |
 
   Scenario: verify invalid category path response
     Given path 'category/test'

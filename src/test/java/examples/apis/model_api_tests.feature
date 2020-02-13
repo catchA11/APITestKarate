@@ -26,7 +26,7 @@ Feature: Model API
       | requestText                          | methodType |
       | {"id":"Arteon","label":"Test Label"} | put        |
       | {"label":"Test Label"}               | post       |
-      | {"name":"Arteon"}                    | delete     |
+      | {"label":"Arteon"}                   | delete     |
 
   Scenario: verify invalid model path response
     Given path 'model/test'
