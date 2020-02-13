@@ -21,7 +21,7 @@ Feature: Category API
     Then status 200
     And match response.categories == expectedCategories
 
-  Scenario Outline: invalid request with text
+  Scenario Outline: invalid category request with text
     Given request <requestText>
     When method <methodType>
     Then status 405
@@ -32,7 +32,7 @@ Feature: Category API
       | {"label":"Test Label"}           | post       |
       | {"name":"Accessories"}           | delete     |
 
-  Scenario: verify invalid path response
+  Scenario: verify invalid category path response
     Given path 'category/test'
     When method get
     Then status 404

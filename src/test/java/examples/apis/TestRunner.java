@@ -6,7 +6,8 @@ class TestRunner {
     
     @Karate.Test
     Karate testAPIs() {
-        return new Karate().feature("category_api_tests").relativeTo(getClass());
+        return new Karate().feature("category_api_tests", "model_api_tests").relativeTo(getClass());
+
     }    
 
 }
