@@ -50,7 +50,20 @@
                     <compilerArgument>-Werror</compilerArgument>
                 </configuration>
             </plugin>
-        </plugins>        
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M1</version>
+                    <configuration>
+                        <includes>
+                            <include>examples/apis/TestRunner.java</include>
+                        </includes>
+                        <systemProperties>
+                            <karate.options>--tags ~@ignore</karate.options>
+                        </systemProperties>
+                    </configuration>
+                </plugin>
+        </plugins>
     </build>       
     
 </project>
